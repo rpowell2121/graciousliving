@@ -1,0 +1,15 @@
+{
+  // Gracious Living site: static pages in public/, served by a Worker.
+  // The Worker only runs for /api/* (forms); everything else is a static file.
+  "name": "graciousliving",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  "observability": { "enabled": true }
+}
