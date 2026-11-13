@@ -9,16 +9,564 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Gracious Living LLC">
 <meta property="og:title" content="Gracious Living LLC | Non-Medical Home Care in Connecticut">
-<meta property="og:description" content="Helping Connecticut families remain safe, independent, and comfortable in the place they call home.">
+<meta property="og:description" content="Non-medical home care in Naugatuck, CT, serving New Haven, Fairfield and Litchfield counties. Personal care, companionship, homemaker, respite and live-in care.">
 <meta property="og:url" content="https://graciouslivingllc.com/">
 <meta property="og:image" content="https://graciouslivingllc.com/img/logo.webp">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="/img/logo.webp">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/css/site.css">
-<link rel="preload" as="image" href="/img/photo-dining-with-client.webp" fetchpriority="high">
+<link rel="preload" href="/fonts/archivo-black-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/montserrat-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/img/photo-personalized-care.webp" imagesrcset="/img/photo-personalized-care-800.webp 800w, /img/photo-personalized-care.webp 1400w" imagesizes="100vw" fetchpriority="high">
+<style>/* Gracious Living LLC site styles.
+   Measurements, colors and type match the original GoDaddy site
+   (desktop 1440 wide, mobile under 768). */
+
+@font-face { font-family: "Archivo Black"; src: url(/fonts/archivo-black-latin-400-normal.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url(/fonts/montserrat-latin-400-normal.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url(/fonts/montserrat-latin-500-normal.woff2) format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url(/fonts/montserrat-latin-600-normal.woff2) format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url(/fonts/montserrat-latin-700-normal.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+
+:root {
+  --purple: #43126c;
+  --gold: #c68c34;
+  --ink: #1b1b1b;
+  --blush: #eae0e0;
+  --cta: #8f6e6e;
+  --hero-text: #f7f7f7;
+  --hero-btn: #f0e9e9;
+  --head: "Archivo Black", Arial, sans-serif;
+  --body: "Montserrat", Arial, sans-serif;
+  --pad: 100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--body); font-size: 16px; line-height: 1.5; color: var(--ink); background: #fff; }
+img { display: block; max-width: 100%; }
+a { color: var(--purple); text-decoration: none; }
+p { margin: 0; text-wrap: pretty; }
+h1, h2, h3, h4 { margin: 0; font-weight: 400; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: -999px; top: 0; z-index: 100; background: var(--purple); color: #fff; padding: 8px 14px; }
+.skip:focus { left: 8px; top: 8px; }
+
+.wrap { width: 1048px; max-width: calc(100% - 48px); margin: 0 auto; }
+.narrow { width: 683px; max-width: 100%; margin: 0 auto; }
+.section { padding: var(--pad) 0; }
+.center { text-align: center; }
+
+/* Type */
+.h-xl { font-family: var(--head); font-size: 39px; line-height: 1.25; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+.h-xl.single { line-height: 1.4; }
+.h-sm { font-family: var(--head); font-size: 19px; line-height: 1.4; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+.h-sub { font-family: var(--body); font-size: 22px; line-height: 1.25; letter-spacing: 2px; color: var(--gold); }
+.h-sub.dark { color: var(--ink); }
+.txt { font-size: 16px; line-height: 1.8; }
+
+/* Buttons (GoDaddy "ghost" style) */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 8px 32px;
+  font-family: var(--head); font-size: 14px; line-height: 1.25; letter-spacing: 2px; text-transform: uppercase; text-align: center;
+  color: var(--purple); background: transparent; border: 1px solid var(--purple); cursor: pointer; }
+.btn:hover { background: var(--purple); color: #fff; }
+.btn-hero { color: var(--hero-btn); border-color: var(--hero-btn); }
+.btn-hero:hover { background: var(--hero-btn); color: #303030; }
+
+/* Top bar + header */
+.topbar { background: var(--blush); color: #0b0a0a; text-align: center; font-size: 16px; line-height: 24px; padding: 8px 24px; }
+.site-header { position: relative; height: 248px; }
+.nav { position: absolute; left: 48px; top: 109px; display: flex; align-items: center; gap: 0; }
+.nav > a, .nav summary { font-family: var(--head); font-size: 14px; line-height: 24px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); cursor: pointer; padding: 6px 0; }
+.nav > a { margin-right: 46px; }
+.nav > a[aria-current="page"]::before { content: "\2013\00a0"; }
+.nav details { position: relative; }
+.nav summary { list-style: none; display: inline-flex; align-items: center; gap: 6px; }
+.nav summary::-webkit-details-marker { display: none; }
+.nav summary svg { width: 12px; height: 12px; }
+.dropdown { position: absolute; top: 44px; left: -16px; min-width: 230px; background: #fff; box-shadow: 0 3px 12px rgba(0,0,0,.15); padding: 8px 0; z-index: 30; }
+.dropdown a { display: block; padding: 8px 18px; font-family: var(--head); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); }
+.dropdown a:hover { color: var(--purple); }
+.logo { position: absolute; left: 50%; top: 24px; width: 199px; transform: translateX(-50%); }
+.logo img { width: 199px; height: 199px; }
+.header-cta { position: absolute; right: 48px; top: 96px; width: 358px; min-height: 56px; color: var(--cta); border-color: var(--cta); }
+.header-cta:hover { background: var(--cta); border-color: var(--cta); color: #fff; }
+.menu-btn { display: none; }
+.mobile-nav { display: none; }
+
+/* Hero */
+.hero { position: relative; margin: 0 48px; height: 731px; padding-bottom: 32px; overflow: hidden; background: #2b2b2b; display: flex; align-items: center; justify-content: center; }
+.hero-media { position: absolute; inset: 0; }
+.hero-media img, .hero-media video { width: 100%; height: 100%; object-fit: cover; }
+.hero::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.45); }
+.hero-in { position: relative; z-index: 1; width: 749px; max-width: calc(100% - 34px); text-align: center; }
+.hero h1 { font-family: var(--head); font-size: 39px; line-height: 1.25; letter-spacing: 2px; text-transform: uppercase; color: var(--hero-text); }
+.hero p { margin-top: 16px; font-size: 22px; line-height: 1.5; letter-spacing: 2px; color: var(--hero-text); }
+.hero .btns { margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 24px; }
+
+/* Badge strip */
+.badges { margin-top: 48px; display: grid; grid-template-columns: repeat(4, 1fr); height: 300px; }
+.badges div { background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; }
+
+/* Why families */
+.why-row { display: flex; align-items: center; }
+.why-text { width: 691px; }
+.why-text h2 { margin-bottom: 8px; }
+.why-text p { line-height: 24px; }
+.why-cta { margin-left: auto; }
+
+/* Cards (2 x 2) */
+.cards { display: grid; grid-template-columns: 500px 500px; column-gap: 48px; row-gap: 48px; justify-content: space-between; }
+.card { text-align: center; }
+.card h3 { min-height: 28px; }
+.card img { margin-top: 23px; width: 500px; height: 250px; object-fit: cover; }
+.txt { text-wrap: pretty; }
+.card p { margin-top: 24px; }
+
+/* Services */
+.services-h { margin-bottom: 99px; }
+.services { display: grid; grid-template-columns: repeat(3, 317px); justify-content: space-between; row-gap: 48px; }
+.service { text-align: center; }
+.service img { width: 317px; height: 317px; object-fit: cover; }
+.service p { margin-top: 25px; }
+.service .btn { margin-top: 24px; }
+
+/* Care process */
+.care-img { width: 100%; height: auto; }
+.care-h { margin-top: 100px; }
+.care-cols { margin-top: 100px; display: flex; justify-content: space-between; }
+.care-left { width: 683px; }
+.care-right { width: 317px; }
+.care-cols p { margin-top: 23px; }
+.care-right .btn { margin-top: 24px; }
+
+/* FAQ */
+.faq-intro { margin-top: 16px; line-height: 24px; }
+.faq-intro a { color: var(--purple); text-decoration: underline; }
+.faq { margin-top: 98px; }
+.faq details { border-bottom: 1px solid #e2e2e2; }
+.faq details + details { margin-top: 0; }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; gap: 0;
+  padding: 24px 0; font-size: 22px; line-height: 1.25; letter-spacing: 2px; color: var(--purple); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary svg { flex: none; width: 16px; height: 16px; margin-left: 16px; color: var(--purple); transition: transform .2s; }
+.faq details[open] summary svg { transform: rotate(180deg); }
+.faq .answer { padding: 0 40px 20px 0; font-size: 16px; line-height: 1.8; }
+.faq .answer ul { margin: 0; padding-left: 22px; }
+
+/* Reviews */
+.reviews { padding: 56px 0 60px; text-shadow: 0 2px 30px rgba(0,0,0,.12); }
+.rv-summary { margin: 56px auto 0; display: flex; align-items: center; justify-content: center; gap: 16px; }
+.rv-g { width: 38px; height: 38px; border-radius: 50%; border: 1px solid #ddd; display: grid; place-items: center; background: #fff; }
+.rv-score { font-family: var(--head); font-size: 40px; line-height: 1; }
+.rv-meta { font-size: 15px; line-height: 1.3; text-align: left; }
+.rv-meta .stars { font-size: 18px; }
+.rv-meta .name { font-size: 16px; }
+.stars { color: #f6bb06; letter-spacing: 1px; }
+.rv-carousel { position: relative; margin: 33px auto 0; width: 1040px; max-width: 100%; display: flex; justify-content: center; align-items: center; gap: 48px; }
+.rv-card { width: 292px; min-height: 344px; background: #fff; box-shadow: 0 8px 40px rgba(0,0,0,.15); padding: 32px 20px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.rv-card.mid { min-height: 364px; }
+.rv-avatar { width: 100px; height: 100px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 44px; font-family: Arial, sans-serif; }
+.rv-card .stars { margin-top: 18px; font-size: 20px; letter-spacing: 0; }
+.rv-card .quote { margin-top: 18px; font-size: 14px; line-height: 1.45; color: #222; text-wrap: pretty; }
+.rv-card .more { margin-top: 12px; font-size: 16px; color: var(--purple); }
+.rv-who { margin-top: auto; display: flex; align-items: center; gap: 0; font-size: 12px; color: #777; white-space: pre; }
+.rv-who .rv-g { width: 22px; height: 22px; margin-right: 10px; }
+.rv-who b { color: #777; font-weight: 600; }
+.rv-arrow { background: none; border: 0; padding: 6px; cursor: pointer; color: #333; }
+.rv-arrow svg { width: 11px; height: 18px; display: block; }
+.rv-arrow.next { opacity: .35; }
+.rv-dots { margin-top: 48px; display: flex; justify-content: center; gap: 14px; }
+.rv-dots span { width: 13px; height: 13px; border-radius: 50%; background: #777; }
+.rv-dots span.on { background: #222; }
+
+/* Contact */
+.contact { padding: 100px 0 0; text-align: center; }
+.contact .h-sub { margin-top: 99px; }
+.contact .h-sub + p { margin-top: 24px; }
+.contact .block { margin-top: 40px; }
+.contact .block p { line-height: 24px; }
+.contact .block p + p { margin-top: 24px; }
+.hours { margin-top: 24px; display: inline-flex; gap: 2px; align-items: center; }
+.hours span { color: var(--purple); display: inline-flex; align-items: center; gap: 6px; }
+.hours svg { width: 12px; height: 12px; }
+.contact .narrow > .btn { margin-top: 68px; width: 456px; max-width: 100%; }
+.map-wrap { position: relative; margin-top: 40px; height: 436px; background: #e8eef0; }
+.map-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+.map-dir { position: absolute; left: 56px; top: 8px; width: 199px; min-height: 40px; padding: 4px 16px; font-size: 12px; background: #fff; gap: 8px; }
+.map-dir svg { width: 12px; height: 12px; }
+
+/* Connect + footer */
+.connect { padding: 100px 0; text-align: center; }
+.icons { margin-top: 96px; display: flex; justify-content: center; }
+.icons a { width: 96px; height: 56px; display: grid; place-items: center; }
+.icons svg { width: 40px; height: 40px; }
+.site-footer { padding: 56px 24px; text-align: center; }
+.footer-intake { display: inline-block; padding: 4px 8px; font-family: var(--head); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); }
+.footer-icons { margin-top: 40px; display: flex; justify-content: center; }
+.footer-icons a { width: 40px; height: 40px; display: grid; place-items: center; }
+.footer-icons svg { width: 24px; height: 24px; }
+.footer-info { margin-top: 16px; color: var(--purple); line-height: 24px; }
+.footer-info p + p { margin-top: 16px; }
+.footer-info .name { font-weight: 700; }
+.legal { margin-top: 24px; font-size: 14px; line-height: 21px; color: var(--ink); }
+.legal b { font-weight: 700; }
+
+/* Contact form (contact page) */
+.field { margin-bottom: 16px; text-align: left; }
+.field label { display: block; font-size: 14px; margin-bottom: 4px; }
+.field input, .field textarea { width: 100%; font: inherit; padding: 12px; border: 0; border-bottom: 1px solid #c4c4c4; background: transparent; }
+.hp { position: absolute; left: -5000px; }
+
+/* Mobile (matches GoDaddy's under-768 layout) */
+@media (max-width: 767px) {
+  :root { --pad: 40px; }
+  .wrap { width: auto; max-width: none; margin: 0 24px; }
+  .topbar { padding: 8px 24px; }
+  .site-header { height: 126px; }
+  .nav, .header-cta { display: none; }
+  .menu-btn { display: block; position: absolute; left: 8px; top: 43px; width: 54px; height: 40px; background: none; border: 0; padding: 0 12px; cursor: pointer; }
+  .menu-btn span { display: block; width: 18px; height: 2px; background: var(--ink); margin: 5px 0; }
+  .hero { padding-bottom: 0; }
+  .btn { line-height: 1.1; }
+  .logo { top: 8px; width: 110px; }
+  .logo img { width: 110px; height: 110px; }
+  .mobile-nav[data-open="true"] { display: block; position: fixed; inset: 0; z-index: 60; background: #fff; padding: 80px 32px 32px; overflow-y: auto; }
+  .mobile-nav a { display: block; padding: 10px 0; font-family: var(--head); font-size: 19px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); }
+  .mobile-close { position: absolute; right: 20px; top: 20px; background: none; border: 0; font-size: 34px; line-height: 1; cursor: pointer; color: var(--ink); }
+  .mobile-nav .btn { margin-top: 24px; width: 100%; font-size: 14px; }
+
+  .hero { margin: 0 24px; height: 568px; }
+  .hero-in { max-width: calc(100% - 35px); }
+  .hero h1 { font-size: 28px; }
+  .hero .btns { gap: 24px; }
+  .hero .btn { width: 100%; }
+  .hero .btn.short { width: auto; }
+
+  .badges { margin-top: 24px; grid-template-columns: 1fr 1fr; grid-template-rows: 130px 130px; height: 260px; }
+
+  .h-xl { font-size: 28px; line-height: 1.25; }
+  .h-xl.single { line-height: 1.4; }
+  .why-row { display: block; }
+  .why-text { width: auto; }
+  .why-cta { display: flex; justify-content: flex-end; margin-top: 24px; }
+  .cards { grid-template-columns: 1fr; row-gap: 48px; }
+  .card img { width: 100%; height: auto; aspect-ratio: 2 / 1; }
+  .services-h { margin-bottom: 40px; }
+  .services { grid-template-columns: 1fr; }
+  .service img { width: 100%; height: auto; aspect-ratio: 1; }
+  .cta-only .narrow { width: auto; margin: 0 24px; }
+  .cta-only .btn { width: 100%; }
+  .care-h { margin-top: 64px; }
+  .care-cols { margin-top: 40px; display: block; }
+  .care-left, .care-right { width: auto; }
+  .care-right { margin-top: 24px; }
+  .faq { margin-top: 39px; }
+  .reviews { padding: 40px 0 0; }
+  .rv-summary, .rv-dots { display: none; }
+  .rv-summary-m { display: block !important; }
+  .rv-card { box-shadow: none; background: none; padding: 0; min-height: 0; width: 100%; }
+  .rv-card .quote { font-size: 16px; line-height: 1.25; }
+  .rv-carousel { margin-top: 0; }
+  .rv-avatar { position: relative; }
+  .rv-badge { display: block !important; }
+  .reviews .h-xl { margin: 0 -24px; }
+  .rv-carousel { flex-direction: column; }
+  .rv-arrow, .rv-card.hide-m { display: none; }
+  .contact { padding-top: 40px; }
+  .contact .h-sub { margin-top: 40px; }
+  .contact .narrow > .btn { width: 100%; }
+  .map-dir { left: 8px; }
+  .map-wrap { height: 200px; }
+  .connect { padding: 40px 0; }
+  .icons { margin-top: 40px; }
+  .icons a { width: 56px; height: 48px; }
+  .icons svg { width: 34px; height: 34px; }
+  .icons { margin-top: 35px; }
+  .site-footer { padding: 40px 24px; }
+  .footer-info { padding: 0 24px; }
+}
+.only-m { display: none !important; }
+@media (max-width: 767px) { .only-m { display: flex !important; } }
+
+/* Mobile-only review summary (stacked, like the original widget on phones) */
+.rv-summary-m { display: none; text-align: center; margin-top: 40px; }
+.rv-summary-m .name { font-size: 16px; }
+.rv-summary-m .row { margin-top: 6px; display: flex; justify-content: center; align-items: center; gap: 25px; }
+.rv-summary-m .row b { font-family: var(--head); font-size: 26px; font-weight: 400; }
+.rv-summary-m .row .stars { font-size: 20px; }
+.rv-summary-m a { display: inline-block; margin-top: 10px; color: #777; text-decoration: underline; }
+.rv-badge { display: none; position: absolute; right: -2px; bottom: -2px; width: 28px; height: 28px; border-radius: 50%; background: #fff; border: 2px solid #fff; }
+.rv-badge svg { width: 100%; height: 100%; }
+@media (max-width: 767px) {
+  .rv-summary-m + .rv-carousel { margin-top: 49px; }
+  .reviews + .contact { padding-top: 111px; }
+}
+
+/* ---------- Inner pages ---------- */
+.site-header.inner { height: 153px; }
+.inner .logo { width: 105px; }
+.inner .logo img { width: 105px; height: 105px; }
+.inner .nav { top: 59px; }
+.inner .header-cta { top: 49px; }
+.nav .more-on > summary::before { content: "\2013\00a0"; }
+.dropdown a[aria-current="page"] { color: var(--purple); }
+.page-h1 { text-align: center; }
+.sec-h { text-align: center; }
+.mt100 { margin-top: 100px; }
+.rt p, .rt { font-size: 16px; line-height: 1.8; }
+.rt-lg p, .rt-lg { font-size: 20px; line-height: 1.8; }
+.rt-sm p, .rt-sm { font-size: 14px; line-height: 1.8; }
+.rt h3 { font-size: 22px; line-height: 1.25; }
+.rt strong, .rt b { font-weight: 700; }
+.split { display: flex; justify-content: space-between; gap: 48px; }
+.split > * { width: 500px; flex: none; }
+.split.center-y { align-items: center; }
+.split + .split { margin-top: 48px; }
+.split img { width: 500px; height: auto; }
+.split img.crop2 { height: 250px; object-fit: cover; }
+.split .h-sub + .rt { margin-top: 23px; }
+.cols-683 { display: flex; justify-content: space-between; }
+.cols-683 > .main { width: 683px; }
+.cols-683 > .side { width: 317px; }
+.cols-683 .side img { width: 317px; height: auto; }
+.cols-683 .side img.crop2 { height: 159px; object-fit: cover; }
+.caption { background: #f5f5f5; padding: 4px 8px; font-size: 14px; line-height: 21px; color: #151515; }
+.h-sub.ink { color: var(--ink); }
+.h-sub.purple { color: var(--purple); }
+@media (max-width: 767px) {
+  .site-header.inner { height: 121px; }
+  .inner .logo { top: 8px; }
+  .page-h1 { text-align: left; }
+  .mt100 { margin-top: 40px; }
+  .split, .cols-683 { display: block; }
+  .split > *, .cols-683 > .main, .cols-683 > .side { width: auto; }
+  .split img, .cols-683 .side img { width: 100%; }
+  .split img.crop2, .cols-683 .side img.crop2 { height: auto; aspect-ratio: 2 / 1; }
+  .split .img-first-m { display: flex; flex-direction: column; }
+  .split > .media { margin-bottom: 24px; }
+  .split.rev-m { display: flex; flex-direction: column-reverse; gap: 0; }
+  .cols-683.side-first-m { display: flex; flex-direction: column-reverse; }
+  .cols-683 .side { margin-bottom: 32px; }
+}
+.founder-text { margin-top: 24px; }
+/* Services */
+.svc-intro .rt { margin-top: 40px; }
+.svc-intro-btn { margin-top: 30px; width: calc(100% - 8px); }
+.svc-split { margin-top: 99px; }
+.split img.sq, .cols-683 .side img.sq { height: auto; aspect-ratio: 1; object-fit: cover; }
+.svc-text { margin-top: 24px; }
+.svc-text h3 { color: var(--purple); }
+.rt h3 strong { font-weight: 700; }
+.svc-btn { margin-top: 24px; }
+.svc-btn.wide { width: 100%; }
+.svc-final-btn { margin-top: 39px; width: 100%; }
+@media (max-width: 767px) {
+  .svc-intro .rt { margin-top: 40px; }
+  .svc-intro-btn { width: 100%; }
+  .svc-split { margin-top: 40px; }
+  .sec-h { text-align: left; }
+}
+/* Homepage review round 2 */
+.rv-card { flex: none; width: 290px; }
+.rv-arrow { position: absolute; top: 50%; transform: translateY(-50%); }
+.rv-arrow.prev { left: 6px; }
+.rv-arrow.next { right: 17px; }
+.rv-summary { gap: 0; }
+.rv-summary .rv-g { margin-right: 22px; background: #f1f1f1; border-color: #c4c4c4; }
+.rv-summary .rv-g svg { width: 16px; height: 16px; }
+.rv-score { margin-right: 36px; }
+.rv-meta { line-height: 26px; }
+.rv-meta .name { font-size: 18px; }
+.rv-meta .stars { font-size: 19px; letter-spacing: -1px; }
+.reviews { padding-bottom: 63px; }
+.rv-badge { width: 34px; height: 34px; right: -2px; bottom: 4px; }
+.rv-badge svg { display: block; }
+.faq { margin-top: 100px; }
+.map-wrap { height: 432px; }
+.connect { padding-bottom: 105px; }
+@media (max-width: 767px) {
+  .reviews { padding-top: 36px; padding-bottom: 0; }
+  .rv-summary-m { margin-top: 56px; }
+  .rv-summary-m .name { font-size: 18px; }
+  .rv-summary-m .row b { font-size: 30px; }
+  .rv-summary-m a { margin-top: 28px; }
+  .rv-card .quote { max-width: 250px; }
+  .rv-card .rv-who { margin-top: 24px; }
+  .rv-who .rv-g { width: 24px; height: 24px; }
+  .legal { margin-top: 30px; }
+  .faq { margin-top: 41px; }
+  .map-wrap { height: 200px; }
+  .connect { padding-bottom: 40px; }
+}
+/* Referral Partners */
+.ref-split .rt { margin-top: 24px; }
+.ref-split .rt p { text-wrap: pretty; }
+.ref-btn { margin-top: 24px; width: 100%; }
+.ref-docs { padding-left: 8px; padding-right: 8px; }
+.doc-cards { margin-top: 99px; display: flex; justify-content: center; align-items: center; gap: 48px; }
+.doc-card { width: 317px; padding: 24px; background: #f6f6f6; border: 1px solid #dadada; text-align: center; color: #151515; font-size: 16px; line-height: 24px; }
+.doc-card .btn { margin-top: 24px; }
+.btn-sm { min-height: 40px; padding: 4px 16px; font-size: 12px; }
+@media (max-width: 767px) {
+  .doc-cards { margin-top: 40px; flex-direction: column; gap: 24px; }
+  .doc-card { width: 100%; }
+  .ref-split .center { margin-top: 0; }
+}
+@media (max-width: 767px) {
+  h1.sec-h, .ref-docs .sec-h { text-align: center; }
+}
+.split.ref-split .h-sub + .rt { margin-top: 24px; }
+@media (max-width: 767px) {
+  .ref-split { padding-bottom: 24px; }
+  .ref-btn { line-height: 15px; }
+  .split.ref-split .h-sub + .rt { margin-top: 23px; }
+}
+/* Careers */
+.car-hero { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; margin-top: 100px; }
+.car-join { margin-top: 24px; }
+.car-tag { margin-top: 23px; }
+.car-apply { margin-top: 24px; }
+.car-row { margin-top: 99px; }
+.car-text { margin-top: 24px; }
+.car-welcome { width: 317px; height: 224px; object-fit: cover; }
+.car-diff { display: flex; gap: 48px; }
+.car-diff .side { width: 317px; flex: none; }
+.car-team { width: 317px; height: 201px; object-fit: cover; }
+.car-diff .main { width: 683px; }
+.car-blk + .car-blk { margin-top: 80px; }
+.car-list { margin: 24px 0 0; padding-left: 37px; list-style: disc; font-size: 16px; line-height: 24px; }
+.car-hiring { text-align: left; }
+.car-hire { margin-top: 100px; }
+.car-small { margin-top: 23px; font-size: 13px; line-height: 1.8; }
+.apply-form { margin-top: 23px; }
+.fld { position: relative; }
+.fld + .fld { margin-top: 24px; }
+.fld input, .fld textarea { display: block; width: 100%; border: 0; border-bottom: 1px solid #737373; background: transparent; font: inherit; font-size: 16px; color: #151515; padding: 15px 8px; border-radius: 0; }
+.fld input { height: 51px; }
+.fld textarea { height: 129px; resize: vertical; padding-top: 38px; }
+.fld label { position: absolute; left: 8px; right: 8px; top: 15px; font-size: 16px; line-height: 1.2; color: var(--ink); pointer-events: none; transition: opacity .1s; }
+.fld input:focus + label, .fld input:not(:placeholder-shown) + label { opacity: 0; }
+.fld textarea:focus + label, .fld textarea:not(:placeholder-shown) + label { top: 6px; font-size: 12px; color: #737373; }
+.fld input:focus, .fld textarea:focus { outline: 2px solid var(--purple); outline-offset: 0; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.attach-row { margin-top: 28px; display: flex; justify-content: space-between; align-items: center; }
+.attach { display: inline-flex; align-items: center; gap: 0; color: var(--purple); font-size: 16px; cursor: pointer; }
+.attach svg { width: 16px; height: 16px; }
+.attach input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.attach:focus-within { outline: 2px solid var(--purple); outline-offset: 2px; }
+.attach-count { font-size: 12px; color: #737373; }
+.apply-submit { margin-top: 40px; width: 100%; }
+.apply-note { margin-top: 32px; min-height: 36px; font-size: 12px; line-height: 18px; color: #737373; text-align: center; }
+@media (max-width: 767px) {
+  .car-hero { margin-top: 40px; }
+  .car-row, .car-hire { margin-top: 40px; }
+  .car-diff { display: block; }
+  .car-diff .side, .car-diff .main { width: auto; }
+  .car-team, .car-welcome { width: 100%; }
+  .car-diff .side { margin-bottom: 32px; }
+  .car-blk + .car-blk { margin-top: 80px; }
+  .car-hire .apply-col { margin-top: 48px; }
+  .apply-submit { width: auto; display: flex; margin: 40px auto 0; }
+}
+@media (max-width: 767px) { .car-row.side-first-m .side { margin-bottom: 32px; } }
+.fld textarea { margin-bottom: 4px; vertical-align: top; }
+.attach-row { margin-top: 24px; }
+.rt.car-small p { font-size: 13px; line-height: 23.4px; }
+.car-row { margin-top: 100px; }
+.car-tag { margin-top: 24px; }
+@media (max-width: 767px) { .car-row { margin-top: 40px; } }
+.fld textarea { margin-bottom: 0; }
+.fld:has(textarea) { padding-bottom: 4px; }
+@media (max-width: 767px) { .car-apply { margin-bottom: -8px; } }
+.attach, .attach-count { line-height: 19px; }
+.apply-note { margin-bottom: 16px; }
+/* Contact page */
+.ct-body { margin-top: 100px; }
+.ct-form { margin-top: 23px; text-align: left; }
+.ct-send { display: flex; margin: 24px auto 0; }
+.ct-note { margin-top: 32px; font-size: 12px; line-height: 18px; color: #737373; text-align: center; }
+.ct-note a { color: var(--purple); }
+.ct-visit { margin-top: 56px; }
+.ct-p { margin-top: 24px; }
+.ct-biz { margin-top: 39px; margin-bottom: 24px; }
+@media (max-width: 767px) {
+  .ct-body { margin-top: 40px; }
+  .ct-form { margin-top: 24px; }
+  .ct-note { min-height: 36px; }
+  .ct-biz { margin-top: 40px; margin-bottom: 23px; }
+}
+.ct-form { margin-top: 24px; }
+.ct-biz { margin-top: 40px; margin-bottom: 24px; }
+@media (max-width: 767px) { .ct-biz { margin-bottom: 24px; } }
+/* Review round 3 */
+.rv-summary { margin-top: 53px; }
+.rv-carousel { margin-top: 28px; }
+.rv-dots { margin-top: 51px; }
+.rv-meta .stars { font-size: 19.5px; letter-spacing: 0; }
+.rv-summary .rv-g { width: 40px; height: 40px; }
+.nav { left: 62px; }
+.nav > a[aria-current="page"]::before { content: "\2013"; position: absolute; margin-left: -14px; }
+.nav > a[aria-current="page"] { position: relative; }
+.nav .more-on > summary::before { position: absolute; margin-left: -14px; }
+.nav .more-on > summary { position: relative; }
+.split + .split { margin-top: 49px; }
+.cols-683 .side img.r32 { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.founder-text p, .rt p { text-wrap: pretty; }
+.svc-text h3 { margin-top: 1px; }
+@media (min-width: 768px) { .cols-683 .side img.day-img { height: auto; aspect-ratio: 1; } }
+@media (max-width: 767px) {
+  .rv-summary-m .row { margin-top: -1px; }
+  .rv-summary-m a { margin-top: 24px; }
+  .rv-summary-m + .rv-carousel { margin-top: 46px; }
+  .rv-card .stars { margin-top: 11px; }
+  .rv-card .more { margin-top: 17px; }
+  .reviews + .contact { padding-top: 106px; }
+  .rv-summary-m .row .stars { font-size: 19px; }
+  .rv-who .rv-g { width: 24px; height: 24px; border-color: #c4c4c4; }
+  .icons { margin-top: 37px; }
+  .center-m, .sec-h { text-align: center; }
+  .caption { margin-top: 32px; text-align: center; padding: 15px 8px; }
+  .m24 { width: auto; margin-left: 24px; margin-right: 24px; }
+  .svc-final .h-xl { max-width: 300px; margin-left: auto; margin-right: auto; }
+  .svc-sec ~ .svc-sec { padding-top: 64px; }
+}
+@media (max-width: 767px) {
+  .mission-h { margin-top: 24px; }
+  .cols-683.side-first-m figure.side { margin-bottom: 26px !important; }
+}
+/* Intake form */
+.intake-frame { display: block; width: 100%; max-width: 980px; height: 2400px; margin: 0 auto; border: 0; }
+.intake-help { margin-top: 24px; text-align: center; font-size: 14px; line-height: 21px; }
+.intake-help a { color: var(--purple); }
+@media (max-width: 767px) { .intake-frame { height: 2000px; } }
+/* Review round 4 */
+.btn { line-height: 15px; }
+.inner .nav { top: 61px; }
+.footer-icons { margin-top: 42px; }
+.caption { padding: 20px 16px 10px; }
+.fld textarea + label { line-height: 28px; top: 8px; }
+.fld input + label { right: auto; max-width: calc(100% - 16px); text-align: center; }
+.attach svg { width: 12px; height: 12px; margin: 0 4px 0 4px; }
+.attach-row { margin-top: 27px; }
+.faq summary svg { margin-right: 4px; }
+.rv-who .rv-g { flex: none; }
+@media (min-width: 768px) {
+  .car-team { height: 147px; margin-top: 53px; }
+}
+@media (max-width: 767px) {
+  .rv-card .quote { margin-top: 22px; }
+  .rv-who .rv-g { margin-right: 10px; }
+  .footer-icons { margin-top: 37px; }
+  .cols-683.side-first-m figure.side { margin-bottom: 28px !important; }
+  .caption { margin-top: 32px; }
+  .svc-sec + .section { padding-top: 64px; }
+  .svc-text h3 { margin-top: 0; }
+  .attach { text-align: center; }
+  .attach span { flex: 1; }
+}
+.ct-note a, .intake-help a { text-decoration: underline; }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,14 +579,7 @@
   "image": "https://graciouslivingllc.com/img/logo.webp",
   "telephone": "+1-860-901-2262",
   "email": "info@graciouslivingllc.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "149 Quinn St",
-    "addressLocality": "Naugatuck",
-    "addressRegion": "CT",
-    "postalCode": "06770",
-    "addressCountry": "US"
-  },
+  "address": { "@type": "PostalAddress", "streetAddress": "149 Quinn St", "addressLocality": "Naugatuck", "addressRegion": "CT", "postalCode": "06770", "addressCountry": "US" },
   "geo": { "@type": "GeoCoordinates", "latitude": 41.4990019, "longitude": -73.0634763 },
   "areaServed": [
     { "@type": "AdministrativeArea", "name": "New Haven County, Connecticut" },
@@ -47,51 +588,36 @@
   ],
   "founder": { "@type": "Person", "name": "Doris Jones", "jobTitle": "Founder & CEO" },
   "foundingDate": "2008",
-  "sameAs": [
-    "https://www.facebook.com/profile.php?id=100093521816243",
-    "https://www.instagram.com/graciouslivingllc/"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Non-medical home care services",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personal Care Assistance", "url": "https://graciouslivingllc.com/services#personal-care" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Companion Care", "url": "https://graciouslivingllc.com/services#companion-care" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Homemaker Services", "url": "https://graciouslivingllc.com/services#homemaker" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Respite Care", "url": "https://graciouslivingllc.com/services#respite-care" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Transportation Assistance", "url": "https://graciouslivingllc.com/services#transportation" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Live-In Care", "url": "https://graciouslivingllc.com/services#live-in-care" } }
-    ]
-  }
+  "sameAs": ["https://www.facebook.com/profile.php?id=100093521816243", "https://www.instagram.com/graciouslivingllc/"]
 }
 </script>
+
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <div class="topbar">Gracious Living LLC solely provides non-medical care</div>
 
-<header class="site-header">
-  <div class="wrap header-in">
-    <nav class="nav" aria-label="Main">
-      <a href="/" aria-current="page">Home</a>
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <details>
-        <summary>More</summary>
-        <div class="dropdown">
-          <a href="/referral-partners">Referral Partners</a>
-          <a href="/careers">Careers</a>
-          <a href="/contact">Contact</a>
-          <a href="/intake-form">Intake Form</a>
-        </div>
-      </details>
-    </nav>
-    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button>
-    <a class="logo" href="/" aria-label="Gracious Living LLC home"><img src="/img/logo.webp" alt="Gracious Living LLC logo" width="112" height="112"></a>
-    <div class="header-cta"><a class="btn btn-wide" href="/contact">Schedule a Complimentary Consultation</a><a class="btn btn-call" href="tel:+18609012262">Call</a></div>
-  </div>
+<header class="site-header ">
+  <nav class="nav" aria-label="Main">
+    <a href="/" aria-current="page">Home</a>
+    <a href="/about">About</a>
+    <details class="">
+      <summary>More <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7l10 10L22 7" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></summary>
+      <div class="dropdown">
+        <a href="/services">Services</a>
+        <a href="/referral-partners">Referral Partners</a>
+        <a href="/careers">Careers</a>
+        <a href="/contact">Contact</a>
+        <a href="/intake-form">Intake Form</a>
+      </div>
+    </details>
+  </nav>
+  <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button>
+  <a class="logo" href="/" aria-label="Gracious Living LLC home"><img src="/img/logo.webp" alt="Gracious Living LLC logo" width="199" height="199"></a>
+  <a class="btn header-cta" href="/contact">Schedule a Complimentary Consultation</a>
   <nav class="mobile-nav" id="mobile-nav" data-open="false" aria-label="Mobile">
+    <button class="mobile-close" type="button" aria-label="Close menu">&times;</button>
     <a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/services">Services</a>
@@ -99,251 +625,253 @@
     <a href="/careers">Careers</a>
     <a href="/contact">Contact</a>
     <a href="/intake-form">Intake Form</a>
-    <a href="tel:+18609012262">Call 860-901-2262</a>
+    <a class="btn" href="/contact">Schedule a Complimentary Consultation</a>
   </nav>
 </header>
 
 <main id="main">
-
-  <section class="hero">
-    <!-- Interim hero photo (their own). The original hero video is GoDaddy-licensed Getty stock and can't move off GoDaddy. -->
-    <div class="hero-media"><img src="/img/photo-dining-with-client.webp" alt="" fetchpriority="high"></div>
+<section class="hero" aria-label="Introduction">
+    <!-- Interim photo: the original hero video is GoDaddy-licensed Getty stock and can't move off GoDaddy. -->
+    <div class="hero-media"><img src="/img/photo-personalized-care.webp" srcset="/img/photo-personalized-care-800.webp 800w, /img/photo-personalized-care.webp 1400w" sizes="100vw" alt="" fetchpriority="high"></div>
     <div class="hero-in">
       <h1>Compassionate Care. Trusted Support. At Home.</h1>
-      <p>Non-medical home care helping Connecticut families remain safe, independent, and comfortable in the place they call home.</p>
-      <div class="btn-row">
-        <a class="btn btn-light" href="/contact">Schedule a Complimentary Consultation</a>
-        <a class="btn btn-light" href="/referral-partners">Refer a Client</a>
+      <p>Helping Connecticut families remain safe, independent, and comfortable in the place they call home.</p>
+      <div class="btns">
+        <a class="btn btn-hero" href="/contact">Schedule a Complimentary Consultation</a>
+        <a class="btn btn-hero short" href="/contact">Refer a Client</a>
       </div>
     </div>
   </section>
 
-  <div class="wrap badges" role="list" aria-label="About Gracious Living">
-    <img role="listitem" src="/img/badge-locally-owned.webp" alt="Locally owned and community focused, based in Naugatuck, Connecticut" width="190" height="190" loading="lazy">
-    <img role="listitem" src="/img/badge-licensed-bonded-insured.webp" alt="Licensed, bonded and insured" width="190" height="190" loading="lazy">
-    <img role="listitem" src="/img/badge-service-area.webp" alt="Serving New Haven, Fairfield and Litchfield counties" width="190" height="190" loading="lazy">
-    <img role="listitem" src="/img/badge-payment-options.webp" alt="Flexible payment options: private pay, long-term care insurance plans accepted, and Medicaid eligible programs" width="190" height="190" loading="lazy">
+  <div class="badges">
+    <div role="img" aria-label="Locally owned and community focused, based in Naugatuck" style="background-image:url(/img/badge-locally-owned.webp)"></div>
+    <div role="img" aria-label="Licensed, bonded and insured" style="background-image:url(/img/badge-licensed-bonded-insured.webp);background-size:auto 105%"></div>
+    <div role="img" aria-label="Serving New Haven, Fairfield and Litchfield counties" style="background-image:url(/img/badge-service-area.webp)"></div>
+    <div role="img" aria-label="Flexible options: private pay, insurance plans accepted, Medicaid eligible programs" style="background-image:url(/img/badge-payment-options.webp)"></div>
   </div>
 
-  <section class="section alt" aria-labelledby="why">
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <h2 id="why">Why Families Choose Gracious Living</h2>
-          <p>At Gracious Living, we understand that inviting someone into your home is one of the most important decisions a family can make.</p>
-          <p>Every caregiver is selected not only for their qualifications, but for their compassion, professionalism, and commitment to serving with dignity.</p>
-          <p>Because every person deserves to age with grace, dignity, and respect.</p>
-        </div>
-        <a class="btn split-cta" href="/contact">Get Started</a>
+  <section class="section">
+    <div class="wrap why-row">
+      <div class="why-text">
+        <h2 class="h-xl">Why Families Choose Gracious Living</h2>
+        <p>&nbsp;At Gracious Living, we understand that inviting someone into your home is one of the most important decisions a family can make.</p>
+        <p>Every caregiver is selected not only for their qualifications, but for their compassion, professionalism, and commitment to serving with dignity.</p>
+        <p>Because every person deserves to age with grace, dignity, and respect.</p>
       </div>
+      <div class="why-cta"><a class="btn" href="/contact">Get Started</a></div>
+    </div>
+  </section>
 
-      <div class="cards4">
-        <div class="card">
-          <img src="/img/photo-personal-care.webp" alt="Gracious Living caregiver assisting a client at home" width="400" height="300" loading="lazy">
-          <h3>Personalized Care</h3>
-          <p>Every care plan is designed around the client's unique needs, preferences, and goals.</p>
-        </div>
-        <div class="card">
-          <img src="/img/photo-personalized-care.webp" alt="Caregiver spending time with an older woman" width="400" height="300" loading="lazy">
-          <h3>Compassionate Professionals</h3>
-          <p>Our caregivers are selected not only for their qualifications, but for their heart, empathy, and commitment to excellence.</p>
-        </div>
-        <div class="card">
-          <img src="/img/photo-companion-support.webp" alt="Caregiver providing companion support" width="400" height="300" loading="lazy">
-          <h3>Independence with Dignity</h3>
-          <p>We believe receiving assistance should never mean losing independence.</p>
-        </div>
-        <div class="card">
-          <img src="/img/photo-caring-assistance.webp" alt="Caregiver and client together at home" width="400" height="300" loading="lazy">
-          <h3>Family Partnership</h3>
-          <p>We work closely with families to ensure open communication, trust, and peace of mind throughout every stage of care.</p>
-        </div>
+  <section class="section">
+    <div class="wrap cards">
+      <div class="card">
+        <h3 class="h-sub">Personalized Care</h3>
+        <img src="/img/photo-personal-care.webp" alt="Gracious Living caregiver helping a client with personal care" width="500" height="250" loading="lazy">
+        <p class="txt">Every care plan is designed around the client's unique needs, preferences, and goals.</p>
+      </div>
+      <div class="card">
+        <h3 class="h-sub">Compassionate Professionals</h3>
+        <img src="/img/photo-dining-with-client.webp" alt="Caregiver sharing a meal with a client" width="500" height="250" loading="lazy">
+        <p class="txt">Our caregivers are selected not only for their qualifications, but for their heart, empathy, and commitment to excellence.</p>
+      </div>
+      <div class="card">
+        <h3 class="h-sub">Independence with Dignity</h3>
+        <!-- Interim photo (original is GoDaddy Getty stock) -->
+        <img src="/img/photo-24-monitoring.webp" alt="Caregiver supporting a client at home" width="500" height="250" loading="lazy">
+        <p class="txt">We believe receiving assistance should never mean losing independence.</p>
+      </div>
+      <div class="card">
+        <h3 class="h-sub">Family Partnership</h3>
+        <!-- Interim photo (original is GoDaddy Getty stock) -->
+        <img src="/img/photo-in-home-assessment.webp" alt="Caregiver meeting with a client and family at home" width="500" height="250" loading="lazy">
+        <p class="txt">We work closely with families to ensure open communication, trust, and peace of mind throughout every stage of care.&nbsp;</p>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="services">
-    <div class="wrap center">
-      <h2 id="services">Our Services</h2>
-      <p class="lead">Non-medical home care built around each person's routines, preferences, and goals.</p>
+  <section class="section">
+    <div class="wrap">
+      <h2 class="h-xl single center services-h">Our Services</h2>
       <div class="services">
-        <article class="service">
-          <img src="/img/icon-personal-care.webp" alt="" width="210" height="210" loading="lazy">
-          <h3>Personal Care Assistance</h3>
-          <p>Helping clients maintain independence while assisting with daily personal routines.</p>
-          <p class="tasks">Bathing &middot; Dressing &middot; Grooming &middot; Toileting Assistance &middot; Mobility Support</p>
-          <a class="btn" href="/services#personal-care">Learn about personal care</a>
-        </article>
-        <article class="service">
-          <img src="/img/icon-companion-care.webp" alt="" width="210" height="210" loading="lazy">
-          <h3>Companion Care</h3>
-          <p>Meaningful companionship that enhances emotional well-being.</p>
-          <p class="tasks">Conversation &middot; Reading &middot; Games &middot; Meal Companionship &middot; Social Engagement</p>
-          <a class="btn" href="/services#companion-care">Learn about companion care</a>
-        </article>
-        <article class="service">
-          <img src="/img/icon-homemaker.webp" alt="" width="210" height="210" loading="lazy">
-          <h3>Homemaker Services</h3>
-          <p>Helping maintain a safe and comfortable home.</p>
-          <p class="tasks">Light Housekeeping &middot; Laundry &middot; Meal Preparation &middot; Grocery Shopping &middot; Medication Reminders</p>
-          <a class="btn" href="/services#homemaker">Learn about homemaker services</a>
-        </article>
-        <article class="service">
-          <img src="/img/icon-respite-care.webp" alt="" width="210" height="210" loading="lazy">
-          <h3>Respite Care</h3>
-          <p>Providing temporary relief so family caregivers can rest, attend appointments, or simply recharge.</p>
-          <a class="btn" href="/services#respite-care">Learn about respite care</a>
-        </article>
-        <article class="service">
-          <img src="/img/icon-transportation.webp" alt="" width="210" height="210" loading="lazy">
-          <h3>Transportation Assistance</h3>
-          <p>Helping clients remain active and connected.</p>
-          <p class="tasks">Medical Appointments &middot; Grocery Shopping &middot; Community Activities</p>
-          <a class="btn" href="/services#transportation">Learn about transportation</a>
-        </article>
-        <article class="service">
-          <img src="/img/icon-live-in-care.webp" alt="" width="210" height="210" loading="lazy">
-          <h3>Live-In Care</h3>
-          <p>Comprehensive support for individuals who require continuous supervision or daily assistance, delivered in the comfort of their own home.</p>
-          <a class="btn" href="/services#live-in-care">Learn about live-in care</a>
-        </article>
+        <div class="service">
+          <img src="/img/icon-personal-care.webp" alt="Personal care assistance: bathing, dressing, grooming, toileting assistance, mobility support" width="317" height="317" loading="lazy">
+          <p class="txt">&nbsp;Helping clients maintain independence while assisting with daily personal routines. Bathing &bull; Dressing &bull; Grooming &bull; Toileting Assistance &bull; Mobility Support &nbsp;</p>
+          <a class="btn" href="/services#personal-care">Learn More<span class="sr-only"> about personal care assistance</span></a>
+        </div>
+        <div class="service">
+          <img src="/img/icon-companion-care.webp" alt="Companion care: conversation, reading, games, meal companionship, social engagement" width="317" height="317" loading="lazy">
+          <p class="txt">Meaningful companionship that enhances emotional well-being. Conversation &bull; Reading &bull; Games &bull; Meal Companionship &bull; Social Engagement</p>
+          <a class="btn" href="/services#companion-care">Learn More<span class="sr-only"> about companion care</span></a>
+        </div>
+        <div class="service">
+          <img src="/img/icon-homemaker.webp" alt="Homemaker services: light housekeeping, laundry, meal preparation, grocery shopping, medication reminders" width="317" height="317" loading="lazy">
+          <p class="txt">Helping maintain a safe and comfortable home. Light Housekeeping &bull; Laundry &bull; Meal Preparation &bull; Grocery Shopping &bull; Medication Reminders</p>
+          <a class="btn" href="/services#homemaker">Learn More<span class="sr-only"> about homemaker services</span></a>
+        </div>
+        <div class="service">
+          <img src="/img/icon-respite-care.webp" alt="Respite care: temporary relief for family caregivers" width="317" height="317" loading="lazy">
+          <p class="txt">Providing temporary relief so family caregivers can rest, attend appointments, or simply recharge.</p>
+          <a class="btn" href="/services#respite-care">Learn More<span class="sr-only"> about respite care</span></a>
+        </div>
+        <div class="service">
+          <img src="/img/icon-transportation.webp" alt="Transportation assistance: medical appointments, grocery shopping, community activities" width="317" height="317" loading="lazy">
+          <p class="txt">Helping clients remain active and connected. Medical Appointments &bull; Grocery Shopping &bull; Community Activities</p>
+          <a class="btn" href="/services#transportation">Learn More<span class="sr-only"> about transportation assistance</span></a>
+        </div>
+        <div class="service">
+          <img src="/img/icon-live-in-care.webp" alt="Live-in care: continuous support at home" width="317" height="317" loading="lazy">
+          <p class="txt">Comprehensive support for individuals who require continuous supervision or daily assistance, delivered in the comfort of their own home.</p>
+          <a class="btn" href="/services#live-in-care">Learn More<span class="sr-only"> about live-in care</span></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="band" aria-labelledby="consult">
-    <div class="wrap">
-      <h2 id="consult">Talk With Us About Care</h2>
-      <p>Every family's situation is different. A free consultation is the easiest way to find out what support would help most.</p>
-      <a class="btn btn-light" href="/contact">Schedule a Complimentary Care Consultation</a>
-    </div>
+  <section class="section cta-only">
+    <div class="narrow center"><a class="btn" style="width:100%" href="/contact">Schedule a Complimentary Care Consultation</a></div>
   </section>
 
-  <section class="section" aria-labelledby="process">
-    <div class="wrap center">
-      <h2 id="process">Our Care Process</h2>
-      <p class="lead">Where compassion meets professionalism. Getting started takes five simple steps.</p>
-      <ol class="steps">
-        <li><div><strong>Reach out</strong><span>Call us or contact us through our website to discuss your needs.</span></div></li>
-        <li><div><strong>Consultation</strong><span>We contact your family within 1 business day to schedule a complimentary care consultation.</span></div></li>
-        <li><div><strong>Care plan</strong><span>We develop a personalized care plan.</span></div></li>
-        <li><div><strong>Caregiver match</strong><span>We thoughtfully match each client with a caregiver whose skills and personality are a good fit.</span></div></li>
-        <li><div><strong>Care begins</strong><span>Services begin with a compassionate, dependable caregiver.</span></div></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section alt" aria-labelledby="faq">
+  <section class="section">
     <div class="wrap">
-      <h2 id="faq" class="center">Frequently Asked Questions</h2>
-      <p class="center">Can't find your answer? Email us at <a href="mailto:info@graciouslivingllc.com">info@graciouslivingllc.com</a>.</p>
-      <div class="faq">
-        <details>
-          <summary>What areas do you serve?</summary>
-          <div class="answer"><p>Gracious Living LLC proudly serves clients throughout New Haven County, Fairfield County, and Litchfield County. If you're unsure whether we serve your community, please contact us. We're happy to discuss your needs.</p></div>
-        </details>
-        <details>
-          <summary>What payment methods do you accept?</summary>
-          <div class="answer"><p>We accept a variety of payment options, including Self-Pay (Private Pay), long-term care insurance from participating plans, and the Connecticut Home Care Program for eligible clients. If your insurance provider is not currently accepted, we'd love to hear from you. We are continually evaluating new insurance partnerships and are happy to review credentialing opportunities with additional carriers whenever possible.</p></div>
-        </details>
-        <details>
-          <summary>What is your minimum service requirement?</summary>
-          <div class="answer">
-            <ul>
-              <li>Private Pay: Minimum 4-hour visit</li>
-              <li>Long-Term Care Insurance: Minimum 2-hour visit (unless otherwise authorized)</li>
-              <li>Medicaid &amp; Government Programs: Visits are scheduled according to the authorized care plan and payer requirements.</li>
-              <li>Veterans Benefits: Visit schedules follow the approved authorization.</li>
-            </ul>
-            <p>Questions about scheduling? Contact us for a complimentary care consultation.</p>
-          </div>
-        </details>
-        <details>
-          <summary>Why does Gracious Living have a four-hour minimum for private-pay services?</summary>
-          <div class="answer"><p>Our four-hour minimum allows caregivers to provide comprehensive, unhurried care while minimizing frequent caregiver changes and travel time. This approach promotes continuity of care, stronger caregiver-client relationships, and a higher quality experience for our clients and their families.</p><p>As Gracious Living continues to grow, this minimum service requirement may be reviewed and revised based on client demand, staffing availability, and operational needs.</p></div>
-        </details>
-        <details>
-          <summary>Do you offer live-in care?</summary>
-          <div class="answer"><p>Yes. Gracious Living LLC offers live-in care services for clients who require around-the-clock assistance while remaining in the comfort and familiarity of their own home. We work with each family to develop a personalized care plan based on their unique needs.</p></div>
-        </details>
-        <details>
-          <summary>What services does Gracious Living LLC provide?</summary>
-          <div class="answer"><p>Our caregivers provide compassionate, non-medical home care services, including Personal Care, Companion Care, Homemaker Services, Transportation Assistance, Respite Care, and Live-In Care. Visit our <a href="/services">Services page</a> for a full breakdown of each category.</p></div>
-        </details>
-        <details>
-          <summary>Are your caregivers trained to care for individuals with Alzheimer's disease and other forms of dementia?</summary>
-          <div class="answer"><p>Yes. Our caregivers receive specialized Alzheimer's and dementia care training that prepares them to support individuals experiencing memory loss with patience, compassion, and respect. Our approach focuses on maintaining dignity, encouraging independence whenever possible, establishing familiar routines, reducing anxiety and confusion, and partnering closely with families throughout the caregiving journey.</p></div>
-        </details>
-        <details>
-          <summary>How do I get started?</summary>
-          <div class="answer"><p>Getting started is easy: contact Gracious Living LLC, schedule your complimentary consultation, meet with our team to discuss your needs, receive a personalized care plan, and begin services with a carefully matched caregiver. We're here to guide you every step of the way.</p></div>
-        </details>
+      <img class="care-img" src="/img/care-process.webp" width="1600" height="1237" loading="lazy"
+        alt="Our care process. Step 1: Reach out by phone or through our website to discuss your needs. Step 2: We contact the family within 1 business day to schedule the complimentary care consultation. Step 3: Personalized care plan is developed. Step 4: We thoughtfully match each client with a caregiver whose skills and personality are a good fit. Step 5: Services begin with a compassionate, dependable caregiver.">
+      <h2 class="h-xl single center care-h">Our Care Process</h2>
+      <div class="care-cols">
+        <div class="care-left">
+          <h3 class="h-sub dark">Where compassion meets professionalism</h3>
+          <p class="txt">At Gracious Living, we provide home health care services to our families. Our team of compassionate professionals is dedicated to helping our clients achieve their health goals and improve their overall quality of life. We offer a wide range of services to ensure that our clients receive the support they need to thrive.</p>
+        </div>
+        <div class="care-right">
+          <h3 class="h-sub dark">Learn More</h3>
+          <p class="txt">If you're interested in learning more about our home health care services, please reach out to us today to schedule a consultation. Our team will work with you to develop a care plan that meets your needs.</p>
+          <a class="btn" href="/contact">Find out more</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section-tight center" aria-labelledby="reviews">
+  <section class="section">
     <div class="wrap">
-      <h2 id="reviews">Read Why Our Clients Love Gracious Living</h2>
-      <div class="rating"><b>5.0</b><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>on Google</span></div>
-      <div class="btn-row"><a class="btn" href="https://www.google.com/maps/place/?q=place_id:ChIJpadReJbD54kRypAS446_X3o" target="_blank" rel="noopener">Read our Google reviews</a></div>
+      <h2 class="h-xl single center">Frequently Asked Questions</h2>
+      <div class="narrow">
+        <p class="center faq-intro">Please reach us at <a href="mailto:info@graciouslivingllc.com">info@graciouslivingllc.com</a> if you cannot find an answer to your question.</p>
+        <div class="faq">
+          <details>
+            <summary>What areas do you serve?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5L12 16l9.5-9.5 1.5 1.5L12 19 1 8z" fill="currentColor"/></svg></summary>
+            <div class="answer"><p>Gracious Living LLC proudly serves clients throughout New Haven County, Fairfield County, and Litchfield County. If you're unsure whether we serve your community, please contact us. We're happy to discuss your needs.</p></div>
+          </details>
+          <details>
+            <summary>What payment methods do you accept?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5L12 16l9.5-9.5 1.5 1.5L12 19 1 8z" fill="currentColor"/></svg></summary>
+            <div class="answer"><p>We accept a variety of payment options, including Self-Pay (Private Pay), long-term care insurance from participating plans, and the Connecticut Home Care Program for eligible clients. If your insurance provider is not currently accepted, we'd love to hear from you. We are continually evaluating new insurance partnerships and are happy to review credentialing opportunities with additional carriers whenever possible.</p></div>
+          </details>
+          <details>
+            <summary>What is your minimum service requirement?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5L12 16l9.5-9.5 1.5 1.5L12 19 1 8z" fill="currentColor"/></svg></summary>
+            <div class="answer">
+              <p>Minimum Hours of Service</p>
+              <ul>
+                <li>Private Pay: Minimum 4-hour visit</li>
+                <li>Long-Term Care Insurance: Minimum 2-hour visit (unless otherwise authorized)</li>
+                <li>Medicaid &amp; Government Programs: Visits are scheduled according to the authorized care plan and payer requirements.</li>
+                <li>Veterans Benefits: Visit schedules follow the approved authorization.</li>
+              </ul>
+              <p>Questions about scheduling? Contact us for a complimentary care consultation.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Why does Gracious Living have a four-hour minimum for private-pay services?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5L12 16l9.5-9.5 1.5 1.5L12 19 1 8z" fill="currentColor"/></svg></summary>
+            <div class="answer"><p>Our four-hour minimum allows caregivers to provide comprehensive, unhurried care while minimizing frequent caregiver changes and travel time. This approach promotes continuity of care, stronger caregiver-client relationships, and a higher quality experience for our clients and their families.</p><p>As Gracious Living continues to grow, this minimum service requirement may be reviewed and revised based on client demand, staffing availability, and operational needs.</p></div>
+          </details>
+          <details>
+            <summary>Do you offer live-in care?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5L12 16l9.5-9.5 1.5 1.5L12 19 1 8z" fill="currentColor"/></svg></summary>
+            <div class="answer"><p>Yes. Gracious Living LLC offers live-in care services for clients who require around-the-clock assistance while remaining in the comfort and familiarity of their own home. We work with each family to develop a personalized care plan based on their unique needs.</p></div>
+          </details>
+          <details>
+            <summary>What services does Gracious Living LLC provide?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5L12 16l9.5-9.5 1.5 1.5L12 19 1 8z" fill="currentColor"/></svg></summary>
+            <div class="answer"><p>Our caregivers provide compassionate, non-medical home care services, including Personal Care, Companion Care, Homemaker Services, Transportation Assistance, Respite Care, and Live-In Care. Visit our Services page for a full breakdown of each category.</p></div>
+          </details>
+          <details>
+            <summary>Are your caregivers trained to care for individuals with Alzheimer's disease and other forms of dementia?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5L12 16l9.5-9.5 1.5 1.5L12 19 1 8z" fill="currentColor"/></svg></summary>
+            <div class="answer"><p>Yes. Our caregivers receive specialized Alzheimer's and dementia care training that prepares them to support individuals experiencing memory loss with patience, compassion, and respect. Our approach focuses on maintaining dignity, encouraging independence whenever possible, establishing familiar routines, reducing anxiety and confusion, and partnering closely with families throughout the caregiving journey.</p></div>
+          </details>
+          <details>
+            <summary>How do I get started?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5L12 16l9.5-9.5 1.5 1.5L12 19 1 8z" fill="currentColor"/></svg></summary>
+            <div class="answer"><p>Getting started is easy: contact Gracious Living LLC, schedule your complimentary consultation, meet with our team to discuss your needs, receive a personalized care plan, and begin services with a carefully matched caregiver. We're here to guide you every step of the way.</p></div>
+          </details>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section alt" aria-labelledby="contact">
-    <div class="wrap contact">
-      <div>
-        <h2 id="contact">Contact Us</h2>
-        <p>Better yet, see us in person! We love our families and partners, so feel free to visit by appointment.</p>
-        <dl>
-          <dt>Address</dt>
-          <dd>Gracious Living LLC<br>149 Quinn St, Naugatuck, CT 06770</dd>
-          <dt>Phone</dt>
-          <dd><a href="tel:+18609012262">860-901-2262</a></dd>
-          <dt>Email</dt>
-          <dd><a href="mailto:info@graciouslivingllc.com">info@graciouslivingllc.com</a></dd>
-          <dt>Hours</dt>
-          <dd>By appointment</dd>
-        </dl>
-        <iframe class="map" title="Map to Gracious Living LLC, 149 Quinn St, Naugatuck, CT" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://maps.google.com/maps?q=Gracious%20Living%20LLC%2C%20149%20Quinn%20St%2C%20Naugatuck%2C%20CT%2006770&amp;z=14&amp;output=embed"></iframe>
+  <section class="reviews">
+    <div class="wrap">
+      <h2 class="h-xl center">Read Why Our Clients Love gracious living llc</h2>
+      <div class="rv-summary">
+        <span class="rv-g" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.6l6.7-6.7C35.6 2.5 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.8 6C12.3 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.4-4.6 7l7.4 5.8c4.3-4 6.9-9.9 6.9-17.3z"/><path fill="#FBBC05" d="M10.4 28.7c-.5-1.4-.8-3-.8-4.7s.3-3.2.8-4.7l-7.8-6C.9 16.6 0 20.2 0 24s.9 7.4 2.6 10.7l7.8-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.8-5.8l-7.4-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.3 0-11.7-4.1-13.6-9.8l-7.8 6C6.6 42.6 14.6 48 24 48z"/></svg></span>
+        <span class="rv-score">5.0</span>
+        <span class="rv-meta"><span class="name">Gracious Living LLC</span><br><span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br><a href="https://www.google.com/maps/place/?q=place_id:ChIJpadReJbD54kRypAS446_X3o" target="_blank" rel="noopener" style="color:inherit">6 Reviews</a></span>
       </div>
-      <form class="contact-form" method="post" action="/api/contact" novalidate>
-        <h3>Have a question? Send us a message.</h3>
-        <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" autocomplete="name"></div>
-        <div class="field"><label for="c-email">Email (required)</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="c-phone">Phone</label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
-        <div class="field"><label for="c-msg">How can we help?</label><textarea id="c-msg" name="message"></textarea></div>
-        <div class="hp" aria-hidden="true"><label for="c-web">Leave this empty</label><input id="c-web" name="website" tabindex="-1" autocomplete="off"></div>
-        <button class="btn btn-solid" type="submit">Send</button>
-        <p class="form-note">Please don't include medical details here. To request care, use our secure <a href="/intake-form">intake form</a>.</p>
-        <p class="form-status" role="status" aria-live="polite"></p>
-      </form>
+      <div class="rv-summary-m"><div class="name">Gracious Living LLC</div><div class="row"><b>5.0</b><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div><a href="https://www.google.com/maps/place/?q=place_id:ChIJpadReJbD54kRypAS446_X3o" target="_blank" rel="noopener">View All 6 Reviews</a></div>
+      <!-- Shows the business's own Google reviews, as the original site's review widget did. -->
+      <div class="rv-carousel">
+        <button class="rv-arrow" type="button" aria-label="Previous reviews"><svg viewBox="0 0 11 18" aria-hidden="true"><path d="M9.5 1.5L2 9l7.5 7.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="rv-card hide-m"><div class="rv-avatar" style="background:#37474f">J</div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="quote">This customer did not write a review.</p><div class="rv-who"><span class="rv-g" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.6l6.7-6.7C35.6 2.5 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.8 6C12.3 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.4-4.6 7l7.4 5.8c4.3-4 6.9-9.9 6.9-17.3z"/><path fill="#FBBC05" d="M10.4 28.7c-.5-1.4-.8-3-.8-4.7s.3-3.2.8-4.7l-7.8-6C.9 16.6 0 20.2 0 24s.9 7.4 2.6 10.7l7.8-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.8-5.8l-7.4-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.3 0-11.7-4.1-13.6-9.8l-7.8 6C6.6 42.6 14.6 48 24 48z"/></svg></span><b>Jill Little</b> - 4/23/2026</div></div>
+        <div class="rv-card mid hide-m"><div class="rv-avatar" style="background:#6b8390">P</div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="quote">"What a wonderful visit I had at Graciousliving today. The..."</p><a class="more" href="https://www.google.com/maps/place/?q=place_id:ChIJpadReJbD54kRypAS446_X3o" target="_blank" rel="noopener">Read full review &rsaquo;</a><div class="rv-who"><span class="rv-g" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.6l6.7-6.7C35.6 2.5 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.8 6C12.3 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.4-4.6 7l7.4 5.8c4.3-4 6.9-9.9 6.9-17.3z"/><path fill="#FBBC05" d="M10.4 28.7c-.5-1.4-.8-3-.8-4.7s.3-3.2.8-4.7l-7.8-6C.9 16.6 0 20.2 0 24s.9 7.4 2.6 10.7l7.8-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.8-5.8l-7.4-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.3 0-11.7-4.1-13.6-9.8l-7.8 6C6.6 42.6 14.6 48 24 48z"/></svg></span><b>Pamela Lane</b> - 4/21/2026</div></div>
+        <div class="rv-card hide-m"><div class="rv-avatar" style="background:#c0254f">C</div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="quote">This customer did not write a review.</p><div class="rv-who"><span class="rv-g" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.6l6.7-6.7C35.6 2.5 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.8 6C12.3 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.4-4.6 7l7.4 5.8c4.3-4 6.9-9.9 6.9-17.3z"/><path fill="#FBBC05" d="M10.4 28.7c-.5-1.4-.8-3-.8-4.7s.3-3.2.8-4.7l-7.8-6C.9 16.6 0 20.2 0 24s.9 7.4 2.6 10.7l7.8-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.8-5.8l-7.4-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.3 0-11.7-4.1-13.6-9.8l-7.8 6C6.6 42.6 14.6 48 24 48z"/></svg></span><b>CJ's Jerk Center</b> - 4/9/2026</div></div>
+        <div class="rv-card only-m"><div class="rv-avatar" style="background:#7b1fa2">r<span class="rv-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fbbc05"/><path d="M7 12.5l3 3 7-7" fill="none" stroke="#fff" stroke-width="2.4"/></svg></span></div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="quote">"I have known Doris Jones for many years. Long before starting Gracious Living, Do..."</p><a class="more" href="https://www.google.com/maps/place/?q=place_id:ChIJpadReJbD54kRypAS446_X3o" target="_blank" rel="noopener">Read full review &rsaquo;</a><div class="rv-who"><span class="rv-g" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.6l6.7-6.7C35.6 2.5 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.8 6C12.3 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.4-4.6 7l7.4 5.8c4.3-4 6.9-9.9 6.9-17.3z"/><path fill="#FBBC05" d="M10.4 28.7c-.5-1.4-.8-3-.8-4.7s.3-3.2.8-4.7l-7.8-6C.9 16.6 0 20.2 0 24s.9 7.4 2.6 10.7l7.8-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.8-5.8l-7.4-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.3 0-11.7-4.1-13.6-9.8l-7.8 6C6.6 42.6 14.6 48 24 48z"/></svg></span><b>robert powell</b> - 5/19/2026</div></div>
+        <button class="rv-arrow next" type="button" aria-label="Next reviews"><svg viewBox="0 0 11 18" aria-hidden="true"><path d="M1.5 1.5L9 9l-7.5 7.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      </div>
+      <div class="rv-dots" aria-hidden="true"><span></span><span class="on"></span></div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap">
+      <h2 class="h-sm">Contact Us</h2>
+      <div class="narrow">
+        <h3 class="h-sub">Better yet, see us in person!</h3>
+        <p class="txt">We love our families and partners, so feel free to visit during normal business hours.</p>
+        <div class="block">
+          <h3 class="h-sub" style="margin-top:0">Gracious Living LLC</h3>
+          <p style="margin-top:24px">149 Quinn Street, Naugatuck, CT, USA</p>
+          <p><a href="tel:+18609012262">860-901-2262</a><br><a href="mailto:info@graciouslivingllc.com">info@graciouslivingllc.com</a></p>
+        </div>
+        <div class="block">
+          <h3 class="h-sub" style="margin-top:0">Hours</h3>
+          <div class="hours">Today <span>&nbsp;By Appointment<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7l10 10L22 7" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></span></div>
+        </div>
+        <a class="btn" href="/contact">Have a question? Contact us today!</a>
+      </div>
+    </div>
+    <div class="map-wrap">
+      <iframe title="Map to Gracious Living LLC, 149 Quinn St, Naugatuck, CT" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=149%20Quinn%20St%2C%20Naugatuck%2C%20CT%2006770&amp;z=13&amp;output=embed"></iframe>
+      <a class="btn map-dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=149%20Quinn%20St%2C%20Naugatuck%2C%20CT%2006770" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L3 10.5l7.5 2.5L13 21z" fill="currentColor"/></svg>Get directions</a>
+    </div>
+  </section>
+  <section class="connect">
+    <h2 class="h-sm">Connect With Us</h2>
+    <div class="icons">
+      <a href="https://www.facebook.com/profile.php?id=100093521816243" aria-label="Gracious Living on Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#1877F2"/><path fill="#fff" d="M33.3 30.9l1.1-6.9h-6.6v-4.5c0-1.9.9-3.7 3.9-3.7h3V9.9s-2.7-.5-5.3-.5c-5.4 0-9 3.3-9 9.2V24h-6v6.9h6V48c1.2.2 2.4.3 3.7.3s2.5-.1 3.7-.3V30.9h5.5z"/></svg></a>
+      <a href="https://www.instagram.com/graciouslivingllc/" aria-label="Gracious Living on Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 48 48" aria-hidden="true"><defs><radialGradient id="ig" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect width="48" height="48" rx="24" fill="#E1306C"/><rect x="13" y="13" width="22" height="22" rx="6" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="24" cy="24" r="5.2" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="30.2" cy="17.8" r="1.5" fill="#fff"/></svg></a>
     </div>
   </section>
 
 </main>
-
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="name">Gracious Living LLC</div>
-    <div>149 Quinn St, Naugatuck, CT 06770 &middot; <a href="tel:+18609012262">860-901-2262</a> &middot; <a href="mailto:info@graciouslivingllc.com">info@graciouslivingllc.com</a></div>
-    <ul class="footer-links">
-      <li><a href="/about">About</a></li>
-      <li><a href="/services">Services</a></li>
-      <li><a href="/referral-partners">Referral Partners</a></li>
-      <li><a href="/careers">Careers</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li><a href="/intake-form">Intake Form</a></li>
-    </ul>
-    <div class="social">
-      <a href="https://www.facebook.com/profile.php?id=100093521816243" aria-label="Gracious Living on Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>
-      <a href="https://www.instagram.com/graciouslivingllc/" aria-label="Gracious Living on Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.2.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 4.9a4.9 4.9 0 1 0 0 9.8 4.9 4.9 0 0 0 0-9.8zm0 8.1a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.1-9.4a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a>
-    </div>
-    <p class="legal">Licensed, Bonded &amp; Insured. Criminal background and drug screenings conducted on all employees.<br>
-      Registered Connecticut Homemaker-Companion Agency | HCA Registration # HCA.0002235<br>
-      Gracious Living LLC solely provides non-medical care.<br>
-      &copy; 2026 Gracious Living LLC. All rights reserved.</p>
+  <a class="footer-intake" href="/intake-form">Intake Form</a>
+  <div class="footer-icons">
+    <a href="https://www.facebook.com/profile.php?id=100093521816243" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#1877F2"/><path fill="#fff" d="M33.3 30.9l1.1-6.9h-6.6v-4.5c0-1.9.9-3.7 3.9-3.7h3V9.9s-2.7-.5-5.3-.5c-5.4 0-9 3.3-9 9.2V24h-6v6.9h6V48c1.2.2 2.4.3 3.7.3s2.5-.1 3.7-.3V30.9h5.5z"/></svg></a>
+    <a href="https://www.instagram.com/graciouslivingllc/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="24" fill="#E1306C"/><rect x="13" y="13" width="22" height="22" rx="6" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="24" cy="24" r="5.2" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="30.2" cy="17.8" r="1.5" fill="#fff"/></svg></a>
+  </div>
+  <div class="footer-info">
+    <p class="name">Gracious Living LLC</p>
+    <p>149 Quinn St. Naugatuck, CT 06770</p>
+    <p><a href="tel:+18609012262">860-901-2262</a></p>
+  </div>
+  <div class="legal">
+    <p><b>Licensed, Bonded, &amp; Insured. Criminal Background and Drug Screenings Conducted on All Employees</b></p>
+    <p>Registered Connecticut Homemaker-Companion Agency | HCA Registration # HCA.0002235</p>
+    <p>Copyright &copy; 2026 Gracious Living LLC - All Rights Reserved.</p>
   </div>
 </footer>
 
